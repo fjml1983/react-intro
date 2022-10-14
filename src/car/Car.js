@@ -33,14 +33,14 @@ export default function Car(props) {
           <em>
             <b>Modelo:</b> {props.modelo}
           </em>
-          <br/>
-          { props.anio < 1970 &&
+          <br />
+          {props.anio < 1970 && (
             <img
               src="https://www.atotoclassicclub.com/images/logo_a.png"
-              width = "50"
+              width="32"
               alt="Insignia Clásico"
             />
-          }
+          )}
           <br />
           <br />
           <button onClick={() => hacerBeep(props.sonido)}>
