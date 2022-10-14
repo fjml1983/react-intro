@@ -17,14 +17,16 @@ export default function App() {
         modelo="Chevrolet Corvette C6 de NASCAR"
         imagen="https://i.ytimg.com/vi/2gRcvS2ltjE/maxresdefault.jpg"
         descripcion="El auto mas veloz de la serie de peliculas de Cars."
-        style={{ margin: '6px' }}
+        sonido="KuChao"
+        anio="2006"
       />
       <Car
         nombre="Mate"
         modelo="International L-170"
         imagen="https://www.venta-de.com.ve/sh-img/latest_grua%2Bmate%2Bcars.jpeg"
         descripcion="El Compañero fiel del auto veloz de la pelicula Cars."
-        style={{ margin: '6px' }}
+        sonido="BEEP BEEP Mate Chocolate"
+        anio="1960"
       />
     </div>
   );
