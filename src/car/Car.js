@@ -1,8 +1,14 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './Car.css';
 
 export default function Car(props) {
-  const [beepeado, setBeppeado] = useState(false);
+  const [beepeando, setBeppeando] = useState(false);
+
+  useEffect(() => {
+    console.log('Se va a guardar a Base de Datos');
+    //Código necesario para guardar en base de datos
+    console.log('Bepeando se guardo en Base de Datos');
+  }, [beepeando]);
 
   //Style from: https://www.w3schools.com/howto/howto_css_cards.asp
 
@@ -11,8 +17,9 @@ export default function Car(props) {
   };
 
   const hacerBeep = (sonido) => {
-    //alert(sonido);
-    setBeppeado(!beepeado);
+    setBeppeando(!beepeando);
+
+    //console.log(sonido);
     /*if (props.modelo.includes('C6')) {
       alert('Ku-Chaw');
     } else if (props.modelo.includes('170')) {
@@ -22,7 +29,7 @@ export default function Car(props) {
 
   return (
     <div style={props.style}>
-      {beepeado && <div className="bubble b r hb">{props.sonido}</div>}
+      {beepeando && <div className="bubble b r hb">{props.sonido}</div>}
 
       <div className="estiloDivCard">
         <img
