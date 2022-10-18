@@ -22,9 +22,7 @@ export default function Car(props) {
 
   return (
     <div style={props.style}>
-      {beepeado && 
-        <h1>{props.sonido}</h1>
-      }
+      {beepeado && <div className="bubble b r hb">{props.sonido}</div>}
 
       <div className="estiloDivCard">
         <img
