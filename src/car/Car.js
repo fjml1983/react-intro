@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Car.css';
 
 export default function Car(props) {
+  const [beepeado, setBeppeado] = useState(false);
+
   //Style from: https://www.w3schools.com/howto/howto_css_cards.asp
 
   const estiloDivCardContenedor = {
@@ -9,7 +11,8 @@ export default function Car(props) {
   };
 
   const hacerBeep = (sonido) => {
-    alert(sonido);
+    //alert(sonido);
+    setBeppeado(!beepeado);
     /*if (props.modelo.includes('C6')) {
       alert('Ku-Chaw');
     } else if (props.modelo.includes('170')) {
@@ -19,6 +22,10 @@ export default function Car(props) {
 
   return (
     <div style={props.style}>
+      {beepeado && 
+        <h1>{props.sonido}</h1>
+      }
+
       <div className="estiloDivCard">
         <img
           className="estiloImgCard"
